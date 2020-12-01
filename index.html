@@ -57,6 +57,7 @@
     function modelReady() {
       console.log("model ready");
       poseNet.multiPose(video);
+      console.log(poses);
     }
 
     // A function to draw ellipses over the detected keypoints
@@ -88,7 +89,6 @@
           ctx.moveTo(partA.position.x, partA.position.y);
           ctx.lineTo(partB.position.x, partB.position.y);
           ctx.stroke();
-          console.log(poses);
         }
       }
     }
